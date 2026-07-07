@@ -1,0 +1,80 @@
+{% extends 'base.html' %} {% block title %} login{% endblock title %} {% block body %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+        #login {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("/static/scripts/images/agriculture_bg.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="login">
+        <div class="container shadow-lg p-4 bg-white rounded border border-primary" style="max-width: 450px; margin: auto;">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-12">
+                    <div id="login-box" class="col-md-12">
+                        <form id="login-form" class="form" action="" method="post">
+                            <h3 class="text-center text-primary mb-4">Admin Registration</h3>
+                            {{form.hidden_tag()}}
+                            
+                            {% if form.errors %}
+                                <div class="alert alert-danger mb-3">
+                                    <ul class="mb-0">
+                                    {% for field, errors in form.errors.items() %}
+                                        {% for error in errors %}
+                                            <li>{{ field.capitalize() }}: {{ error }}</li>
+                                        {% endfor %}
+                                    {% endfor %}
+                                    </ul>
+                                </div>
+                            {% endif %}
+
+                            <div class="form-group mb-3">
+                                <label for="username" class="text-primary font-weight-bold">Username:</label>
+                                {{form.username(class="form-control")}}
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="password" class="text-primary font-weight-bold">Password:</label>
+                                {{form.password(class="form-control")}}
+                            </div>
+                            <div class="form-group mt-4 d-grid">
+                                {{form.submit(class="btn btn-primary btn-md")}}
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+{% endblock body %}

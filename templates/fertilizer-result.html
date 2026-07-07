@@ -1,0 +1,61 @@
+{% extends 'base.html' %} {% block body %}
+
+<style>
+    .hero-image {
+        background-image: linear-gradient(rgba(18, 20, 18, 0.65), rgba(18, 20, 18, 0.65)), url("/static/scripts/images/4.jpeg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 280px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 50px 20px;
+        border-bottom: 3px solid #2c5e3b;
+    }
+
+    body.dark-mode .hero-image {
+        background-image: linear-gradient(rgba(18, 20, 18, 0.8), rgba(18, 20, 18, 0.8)), url("/static/scripts/images/4.jpeg");
+        border-bottom-color: #81c784;
+    }
+    
+    .hero-text {
+        color: white;
+        max-width: 800px;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 25px 35px;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+</style>
+
+<!--About us section-->
+<div class="hero-image">
+    <div class="hero-text">
+        <p class="breadcrumbs text-white font-weight-bold" style="font-family: 'Inter', sans-serif;">
+            <span class="mr-2"><a href="{{ url_for('hello_world') }}" class="text-white" style="text-decoration: none;">Home /</a></span>
+            <span>Fertilizer Recommendation Result</span>
+        </p>
+        <h1 class="mb-0 bread font-weight-bold" style="font-family: 'Inter', sans-serif;">Find out which fertilizer to use</h1>
+    </div>
+</div>
+<!--/About us section-->
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-9 py-3">
+            <div class="card card-body shadow-sm p-4 border border-light" style="border-radius: 16px; border-left: 5px solid #2c5e3b !important;">
+                <h4 class="mb-3 font-weight-bold" style="font-family: 'Inter', sans-serif; color: var(--heading-color);">Recommendation & Treatment Result</h4>
+                <div class="prediction-info" style="font-size: 1.1rem; line-height: 1.7; color: var(--text-color); font-family: 'Inter', sans-serif;">
+                    {{ recommendation }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
