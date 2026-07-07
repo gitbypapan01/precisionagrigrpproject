@@ -71,7 +71,7 @@ The application provides three core ML-powered services:
 
 Contributions, issues, and feature requests are welcome! Feel free to check the issues page if you want to contribute.
 
-### Contributors
+### Contributors:
 - [Saikat-nkb](https://github.com/Saikat-nkb)
 
 ## 📜 License
