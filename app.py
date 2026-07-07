@@ -337,6 +337,8 @@ def init_db():
         conn.close()
         print("Database tables created.")
 
+# Automatically initialize database tables on startup
+init_db()
 # --- Removed SQLAlchemy Model Classes ---
 
 # --- Forms (Modified validate_username) ---
