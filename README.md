@@ -71,6 +71,9 @@ The application provides three core ML-powered services:
 
 Contributions, issues, and feature requests are welcome! Feel free to check the issues page if you want to contribute.
 
+### Contributors
+- [Saikat-nkb](https://github.com/Saikat-nkb)
+
 ## 📜 License
 
 © 2026 Copyright: Precision Agriculture Using Machine Learning. All Rights Reserved.
