@@ -1,0 +1,9 @@
+# Ignore heavy datasets, models notebooks and training scripts from the Vercel Serverless Function bundle
+Data/
+models/*.ipynb
+retrain*.py
+convert_model.py
+keras_disease_app.py
+.gitignore
+debug.log
+README.md
