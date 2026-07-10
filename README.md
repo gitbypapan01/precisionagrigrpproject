@@ -1,6 +1,6 @@
-# Precision Agriculture Using Machine Learning 🌱
+# INTELLIFARM 🌱
 
-Precision Agriculture is an intelligent web-based application designed to help farmers and agricultural enthusiasts make data-driven decisions. By leveraging Machine Learning and Deep Learning models, the system offers actionable insights to improve crop yields, maintain soil health, and detect plant diseases early.
+INTELLIFARM is an intelligent web-based application designed to help farmers and agricultural enthusiasts make data-driven decisions. By leveraging Machine Learning and Deep Learning models, the system offers actionable insights to improve crop yields, maintain soil health, and detect plant diseases early.
 
 ## 🚀 Features
 
@@ -76,4 +76,4 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 
 ## 📜 License
 
-© 2026 Copyright: Precision Agriculture Using Machine Learning. All Rights Reserved.
+© 2026 Copyright: INTELLIFARM. All Rights Reserved.
