@@ -64,7 +64,7 @@ def model_predict(image_path):
 
 @app.route('/', methods=['GET'])
 def home():
-    # Utilizing your existing template
+    # Utilizing  existing template
     return render_template('disease.html', title='- Disease Detection')
 
 @app.route('/disease-predict', methods=['POST'])

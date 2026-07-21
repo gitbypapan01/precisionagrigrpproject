@@ -15,7 +15,7 @@ import torch
 from torchvision import transforms
 from PIL import Image
 from utils.model import ResNet9
-from utils.fertilizer import fertilizer_dic
+from utils.fertilizer import fertilizer_dic, fertilizer_details_dic
 from utils.disease import disease_dic
 
 from flask_jwt_extended import (
@@ -30,6 +30,16 @@ from flask_jwt_extended import (
 crop_recommendation_model_path = 'models/crop2.pkl'
 crop_recommendation_model = pickle.load(
     open(crop_recommendation_model_path, 'rb'))
+
+# Loading fertilizer prediction model and encoders
+fertilizer_model_path = 'models/classifier.pkl'
+fertilizer_model = pickle.load(open(fertilizer_model_path, 'rb'))
+
+fertilizer_encoder_path = 'models/fertilizer.pkl'
+fertilizer_encoder = pickle.load(open(fertilizer_encoder_path, 'rb'))
+
+fertilizer_crop_encoder_path = 'models/crop_encoder.pkl'
+fertilizer_crop_encoder = pickle.load(open(fertilizer_crop_encoder_path, 'rb'))
 
 # Try to load Keras model, otherwise fall back to PyTorch
 keras_disease_model_path = 'models/plant_disease_recog_model_pwp.keras'
@@ -60,6 +70,22 @@ label_mapping = {
     'Corn___healthy': 'Corn_(maize)___healthy',
     'Tomato___Target_Spot': 'Tomato___Target_Spo'
 }
+
+pytorch_label_mapping = {
+    'Cherry_(including_sour)_Powdery_mildew': 'Cherry_(including_sour)___Powdery_mildew',
+    'Cherry_(including_sour)_healthy': 'Cherry_(including_sour)___healthy',
+    'Corn_(maize)_Cercospora_leaf_spot Gray_leaf_spot': 'Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot',
+    'Corn_(maize)Common_rust': 'Corn_(maize)___Common_rust_',
+    'Corn_(maize)_Northern_Leaf_Blight': 'Corn_(maize)___Northern_Leaf_Blight',
+    'Corn_(maize)_healthy': 'Corn_(maize)___healthy',
+    'Grape__Esca(Black_Measles)': 'Grape___Esca_(Black_Measles)',
+    'Grape__Leaf_blight(Isariopsis_Leaf_Spot)': 'Grape___Leaf_blight_(Isariopsis_Leaf_Spot)',
+    'Orange__Haunglongbing(Citrus_greening)': 'Orange___Haunglongbing_(Citrus_greening)',
+    'Pepper,bell__Bacterial_spot': 'Pepper,_bell___Bacterial_spot',
+    'Pepper,bell__healthy': 'Pepper,_bell___healthy',
+    'Tomato___Target_Spot': 'Tomato___Target_Spo'
+}
+
 
 pytorch_disease_classes = ['Apple___Apple_scab',
                            'Apple___Black_rot',
@@ -135,59 +161,59 @@ if active_backend is None:
         print(f"Error loading PyTorch fallback model: {e}")
 
 # (weather_fetch and predict_image functions are unchanged)
-def weather_fetch(city_name):
-    # Normalize city name
-    city_clean = city_name.strip().lower() if city_name else ""
+# def weather_fetch(city_name):
+#     # Normalize city name
+#     city_clean = city_name.strip().lower() if city_name else ""
     
-    # 1. First, try to make the actual API request
-    try:
-        api_key = config.weather_api_key
-        base_url = "http://api.openweathermap.org/data/2.5/weather?"
-        complete_url = base_url + "appid=" + api_key + "&q=" + city_name
-        response = requests.get(complete_url, timeout=3)
-        x = response.json()
-        if response.status_code == 200 and "main" in x:
-            y = x["main"]
-            temperature = round((y["temp"] - 273.15), 2)
-            humidity = y["humidity"]
-            return [temperature, humidity]
-    except Exception as e:
-        print(f"Weather API request error: {e}")
+#     # 1. First, try to make the actual API request
+#     try:
+#         api_key = config.weather_api_key
+#         base_url = "http://api.openweathermap.org/data/2.5/weather?"
+#         complete_url = base_url + "appid=" + api_key + "&q=" + city_name
+#         response = requests.get(complete_url, timeout=3)
+#         x = response.json()
+#         if response.status_code == 200 and "main" in x:
+#             y = x["main"]
+#             temperature = round((y["temp"] - 273.15), 2)
+#             humidity = y["humidity"]
+#             return [temperature, humidity]
+#     except Exception as e:
+#         print(f"Weather API request error: {e}")
         
-    # 2. Fall back to realistic historical weather data for popular agricultural/urban cities
-    city_fallbacks = {
-        "mumbai": [27.0, 75.0],
-        "delhi": [29.0, 50.0],
-        "bangalore": [24.0, 60.0],
-        "bengaluru": [24.0, 60.0],
-        "kolkata": [28.0, 70.0],
-        "chennai": [30.0, 72.0],
-        "pune": [25.0, 55.0],
-        "hyderabad": [27.0, 55.0],
-        "jaipur": [31.0, 40.0],
-        "lucknow": [28.0, 55.0],
-        "patna": [27.0, 60.0],
-        "ahmedabad": [30.0, 50.0],
-        "bhopal": [26.0, 50.0],
-        "chandigarh": [25.0, 50.0],
-        "coimbatore": [26.0, 65.0],
-        "indore": [26.0, 52.0],
-        "nagpur": [29.0, 48.0],
-        "surat": [28.0, 70.0],
-        "visakhapatnam": [28.0, 75.0],
-        "patiala": [26.0, 52.0],
-        "ludhiana": [26.0, 52.0],
-        "london": [15.0, 70.0],
-        "new york": [18.0, 65.0]
-    }
+#     # 2. Fall back to realistic historical weather data for popular agricultural/urban cities
+#     city_fallbacks = {
+#         "mumbai": [27.0, 75.0],
+#         "delhi": [29.0, 50.0],
+#         "bangalore": [24.0, 60.0],
+#         "bengaluru": [24.0, 60.0],
+#         "kolkata": [28.0, 70.0],
+#         "chennai": [30.0, 72.0],
+#         "pune": [25.0, 55.0],
+#         "hyderabad": [27.0, 55.0],
+#         "jaipur": [31.0, 40.0],
+#         "lucknow": [28.0, 55.0],
+#         "patna": [27.0, 60.0],
+#         "ahmedabad": [30.0, 50.0],
+#         "bhopal": [26.0, 50.0],
+#         "chandigarh": [25.0, 50.0],
+#         "coimbatore": [26.0, 65.0],
+#         "indore": [26.0, 52.0],
+#         "nagpur": [29.0, 48.0],
+#         "surat": [28.0, 70.0],
+#         "visakhapatnam": [28.0, 75.0],
+#         "patiala": [26.0, 52.0],
+#         "ludhiana": [26.0, 52.0],
+#         "london": [15.0, 70.0],
+#         "new york": [18.0, 65.0]
+#     }
     
-    if city_clean in city_fallbacks:
-        print(f"Weather API failed. Using historical fallback weather for '{city_name}': {city_fallbacks[city_clean]}")
-        return city_fallbacks[city_clean]
+#     if city_clean in city_fallbacks:
+#         print(f"Weather API failed. Using historical fallback weather for '{city_name}': {city_fallbacks[city_clean]}")
+#         return city_fallbacks[city_clean]
         
-    # 3. Default fallback if city is not in the dictionary
-    print(f"Weather API failed and city '{city_name}' not in fallback database. Using default averages (Temp: 25.0, Humidity: 60.0).")
-    return [25.0, 60.0]
+#     # 3. Default fallback if city is not in the dictionary
+#     print(f"Weather API failed and city '{city_name}' not in fallback database. Using default averages (Temp: 25.0, Humidity: 60.0).")
+#     return [25.0, 60.0]
 
 def predict_image(img):
     global active_backend, keras_disease_model, pytorch_disease_model, keras_model_num_classes
@@ -504,7 +530,7 @@ def disease_prediction():
             
             if backend == 'none':
                 prediction = Markup(f"<div class='alert alert-danger'>{prediction_label}</div>")
-            elif backend == 'keras':
+            elif backend.startswith('keras'):
                 mapped_label = label_mapping.get(prediction_label, prediction_label)
                 if mapped_label == 'Background_without_leaves':
                     prediction = Markup("<b>Background detected</b><br/>Please upload an image of a plant leaf.")
@@ -512,7 +538,8 @@ def disease_prediction():
                     disease_info = disease_dic.get(mapped_label, f"<b>Disease:</b> {mapped_label}<br/>No detailed information available.")
                     prediction = Markup(str(disease_info))
             else: # PyTorch backend
-                prediction = Markup(str(disease_dic.get(prediction_label, f"<b>Disease:</b> {prediction_label}")))
+                mapped_label = pytorch_label_mapping.get(prediction_label, prediction_label)
+                prediction = Markup(str(disease_dic.get(mapped_label, f"<b>Disease:</b> {mapped_label}")))
                 
             return render_template('disease-result.html', prediction=prediction, title=title)
         except Exception as e:
@@ -558,31 +585,43 @@ def crop_prediction():
 
 @app.route('/fertilizer-predict', methods=['POST'])
 def fert_recommend():
-    # ... (unchanged) ...
     title = '- Fertilizer Suggestion'
-    crop_name = str(request.form['cropname'])
+    crop_name = str(request.form['cropname']).strip()
     N = int(request.form['nitrogen'])
     P = int(request.form['phosphorous'])
     K = int(request.form['pottasium'])
-    df = pd.read_csv('Data/fertilizer.csv')
-    nr = df[df['Crop'] == crop_name]['N'].iloc[0]
-    pr = df[df['Crop'] == crop_name]['P'].iloc[0]
-    kr = df[df['Crop'] == crop_name]['K'].iloc[0]
-    n = nr - N
-    p = pr - P
-    k = kr - K
-    temp = {abs(n): "N", abs(p): "P", abs(k): "K"}
-    max_value = temp[max(temp.keys())]
-    if max_value == "N":
-        if n < 0: key = 'NHigh'
-        else: key = "Nlow"
-    elif max_value == "P":
-        if p < 0: key = 'PHigh'
-        else: key = "Plow"
+    
+    # Check if the crop exists in the crop encoder's classes (case-insensitive check and mapping)
+    crop_classes = list(fertilizer_crop_encoder.classes_)
+    crop_classes_lower = [c.lower() for c in crop_classes]
+    
+    crop_name_lower = crop_name.lower()
+    if crop_name_lower in crop_classes_lower:
+        idx = crop_classes_lower.index(crop_name_lower)
+        mapped_crop_name = crop_classes[idx]
     else:
-        if k < 0: key = 'KHigh'
-        else: key = "Klow"
-    response = Markup(str(fertilizer_dic[key]))
+        # Fallback to the first class or a default if not found
+        mapped_crop_name = crop_classes[0]
+        
+    # Encode the crop type
+    encoded_crop = fertilizer_crop_encoder.transform([mapped_crop_name])[0]
+    
+    # Feature order for classifier.pkl: ['Nitrogen', 'Potassium', 'Phosphorous', 'Crop_Type']
+    input_data = pd.DataFrame([[N, K, P, encoded_crop]], columns=['Nitrogen', 'Potassium', 'Phosphorous', 'Crop_Type'])
+    
+    # Predict the fertilizer class index
+    predicted_class_idx = fertilizer_model.predict(input_data)[0]
+    
+    # Decode to fertilizer name
+    predicted_fertilizer = fertilizer_encoder.inverse_transform([predicted_class_idx])[0]
+    
+    # Retrieve the description of the fertilizer
+    recommendation_html = fertilizer_details_dic.get(
+        predicted_fertilizer, 
+        f"<b>Recommended Fertilizer: {predicted_fertilizer}</b><br/>No detailed information available."
+    )
+    
+    response = Markup(recommendation_html)
     return render_template('fertilizer-result.html', recommendation=response, title=title)
 
 # --- Admin Routes (Updated) ---

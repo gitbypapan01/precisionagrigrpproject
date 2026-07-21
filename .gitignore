@@ -38,7 +38,7 @@ venv.bak/
 .flaskenv
 
 # Database
-database.db
+database.db*
 *.sqlite3
 *.db
 

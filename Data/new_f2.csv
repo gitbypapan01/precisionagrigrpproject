@@ -1,0 +1,553 @@
+Nitrogen,Phosphorous,Potassium,Crop_Type,Fertilizer
+90,36,49,rice,Urea
+66,36,59,rice,Urea
+41,0,0,Wheat,Urea
+38,0,0,Wheat,Urea
+39,0,0,Wheat,Urea
+39,0,0,Tobacco,Urea
+38,0,0,Sugarcane,Urea
+35,0,0,Sugarcane,Urea
+38,0,0,Pulses,Urea
+40,0,0,Pulses,Urea
+2,38,24,pomegranate,Urea
+35,0,0,Paddy,Urea
+39,0,0,Paddy,Urea
+36,0,0,Paddy,Urea
+37,0,0,Oil seeds,Urea
+42,0,0,Oil seeds,Urea
+36,0,0,Millets,Urea
+41,0,0,Millets,Urea
+41,0,0,Millets,Urea
+35,0,0,Millets,Urea
+37,0,0,Maize,Urea
+41,0,0,Ground Nuts,Urea
+41,0,0,Ground Nuts,Urea
+36,0,0,Cotton,Urea
+39,0,0,Cotton,Urea
+85,25,33,coffee,Urea
+80,25,30,coffee,Urea
+110,54,10,watermelon,TSP
+86,36,41,rice,TSP
+5,38,15,pomegranate,TSP
+100,54,24,watermelon,TSP
+109,54,27,watermelon,TSP
+5,38,21,pomegranate,TSP
+73,36,48,rice,TSP
+0,38,27,pomegranate,Superphosphate
+31,38,25,pomegranate,Superphosphate
+21,38,21,pomegranate,Superphosphate
+15,38,11,pomegranate,Potassium sulfate.
+39,38,30,pomegranate,Potassium sulfate.
+22,38,26,Cotton,Potassium sulfate.
+117,25,43,Cotton,Potassium chloride
+92,54,8,watermelon,DAP
+114,54,27,watermelon,DAP
+75,36,47,rice,DAP
+13,36,0,Wheat,DAP
+11,37,0,Tobacco,DAP
+12,36,0,Sugarcane,DAP
+12,40,0,Sugarcane,DAP
+78,36,43,rice,DAP
+13,40,0,Pulses,DAP
+12,41,0,Paddy,DAP
+12,39,0,Oil seeds,DAP
+15,37,0,Millets,DAP
+15,41,0,Millets,DAP
+14,41,0,Ground Nuts,DAP
+15,37,0,Ground Nuts,DAP
+13,39,0,Ground Nuts,DAP
+126,25,46,Cotton,DAP
+102,25,37,Cotton,DAP
+15,40,0,Cotton,DAP
+14,38,0,Cotton,DAP
+14,35,0,Cotton,DAP
+11,38,0,Cotton,DAP
+116,25,23,coffee,DAP
+117,25,34,coffee,DAP
+10,35,0,Barley,DAP
+12,42,0,Barley,DAP
+23,19,0,Wheat,28-28
+23,19,0,Wheat,28-28
+22,20,0,Tobacco,28-28
+22,24,0,Tobacco,28-28
+23,21,0,Tobacco,28-28
+21,23,0,Pulses,28-28
+24,19,0,Pulses,28-28
+24,22,0,Paddy,28-28
+24,18,0,Paddy,28-28
+21,18,0,Millets,28-28
+23,24,0,Millets,28-28
+23,20,0,Maize,28-28
+22,21,0,Maize,28-28
+24,23,0,Ground Nuts,28-28
+24,20,0,Cotton,28-28
+21,19,0,Barley,28-28
+21,28,0,Barley,28-28
+13,9,0,Wheat,20-20
+9,13,0,Sugarcane,20-20
+10,15,0,Sugarcane,20-20
+11,9,0,Sugarcane,20-20
+12,10,0,Sugarcane,20-20
+14,13,0,Pulses,20-20
+13,13,0,Pulses,20-20
+13,10,0,Paddy,20-20
+12,8,0,Oil seeds,20-20
+13,14,0,Oil seeds,20-20
+10,9,0,Millets,20-20
+8,15,0,Millets,20-20
+10,14,0,Millets,20-20
+9,10,0,Cotton,20-20
+10,14,13,Sugarcane,17-17-17
+12,12,14,Sugarcane,17-17-17
+11,15,13,Sugarcane,17-17-17
+14,12,15,Maize,17-17-17
+15,11,14,Ground Nuts,17-17-17
+11,15,12,Cotton,17-17-17
+12,13,10,Barley,17-17-17
+20,6,25,kidneybeans,15-15-15
+23,6,23,kidneybeans,15-15-15
+25,6,18,kidneybeans,15-15-15
+23,6,23,kidneybeans,15-15-15
+8,28,8,Wheat,14-35-14
+10,32,7,Sugarcane,14-35-14
+8,33,8,Sugarcane,14-35-14
+8,31,7,Pulses,14-35-14
+9,22,10,Paddy,14-35-14
+10,29,8,Paddy,14-35-14
+9,30,7,Oil seeds,14-35-14
+8,30,9,Oil seeds,14-35-14
+5,29,9,Maize,14-35-14
+9,30,10,Maize,14-35-14
+7,30,9,Cotton,14-35-14
+9,29,9,Cotton,14-35-14
+8,31,10,Cotton,14-35-14
+7,30,9,Barley,14-35-14
+24,6,18,orange,14-14-14
+4,6,13,orange,14-14-14
+8,6,16,orange,14-14-14
+5,6,25,orange,14-14-14
+12,19,18,Wheat,10-26-26
+13,16,17,Tobacco,10-26-26
+4,17,17,Tobacco,10-26-26
+6,16,19,Pulses,10-26-26
+7,20,16,Pulses,10-26-26
+6,21,19,Paddy,10-26-26
+5,15,18,Barley,10-26-26
+22,5,17,orange,10-10-10
+4,5,23,orange,10-10-10
+11,5,14,orange,10-10-10
+19,6,21,kidneybeans,10-10-10
+90,36,49,rice,Urea
+90,36,49,rice,Urea
+90,36,49,rice,Urea
+66,36,59,rice,Urea
+66,36,59,rice,Urea
+66,36,59,rice,Urea
+41,0,0,Wheat,Urea
+41,0,0,Wheat,Urea
+41,0,0,Wheat,Urea
+38,0,0,Wheat,Urea
+38,0,0,Wheat,Urea
+38,0,0,Wheat,Urea
+39,0,0,Wheat,Urea
+39,0,0,Wheat,Urea
+39,0,0,Wheat,Urea
+39,0,0,Tobacco,Urea
+39,0,0,Tobacco,Urea
+39,0,0,Tobacco,Urea
+38,0,0,Sugarcane,Urea
+38,0,0,Sugarcane,Urea
+38,0,0,Sugarcane,Urea
+35,0,0,Sugarcane,Urea
+35,0,0,Sugarcane,Urea
+35,0,0,Sugarcane,Urea
+38,0,0,Pulses,Urea
+38,0,0,Pulses,Urea
+38,0,0,Pulses,Urea
+40,0,0,Pulses,Urea
+40,0,0,Pulses,Urea
+40,0,0,Pulses,Urea
+2,38,24,pomegranate,Urea
+2,38,24,pomegranate,Urea
+2,38,24,pomegranate,Urea
+35,0,0,Paddy,Urea
+35,0,0,Paddy,Urea
+35,0,0,Paddy,Urea
+39,0,0,Paddy,Urea
+39,0,0,Paddy,Urea
+39,0,0,Paddy,Urea
+36,0,0,Paddy,Urea
+36,0,0,Paddy,Urea
+36,0,0,Paddy,Urea
+37,0,0,Oil seeds,Urea
+37,0,0,Oil seeds,Urea
+37,0,0,Oil seeds,Urea
+42,0,0,Oil seeds,Urea
+42,0,0,Oil seeds,Urea
+42,0,0,Oil seeds,Urea
+36,0,0,Millets,Urea
+36,0,0,Millets,Urea
+36,0,0,Millets,Urea
+41,0,0,Millets,Urea
+41,0,0,Millets,Urea
+41,0,0,Millets,Urea
+41,0,0,Millets,Urea
+41,0,0,Millets,Urea
+41,0,0,Millets,Urea
+35,0,0,Millets,Urea
+35,0,0,Millets,Urea
+35,0,0,Millets,Urea
+37,0,0,Maize,Urea
+37,0,0,Maize,Urea
+37,0,0,Maize,Urea
+41,0,0,Ground Nuts,Urea
+41,0,0,Ground Nuts,Urea
+41,0,0,Ground Nuts,Urea
+41,0,0,Ground Nuts,Urea
+41,0,0,Ground Nuts,Urea
+41,0,0,Ground Nuts,Urea
+36,0,0,Cotton,Urea
+36,0,0,Cotton,Urea
+36,0,0,Cotton,Urea
+39,0,0,Cotton,Urea
+39,0,0,Cotton,Urea
+39,0,0,Cotton,Urea
+85,25,33,coffee,Urea
+85,25,33,coffee,Urea
+85,25,33,coffee,Urea
+80,25,30,coffee,Urea
+80,25,30,coffee,Urea
+80,25,30,coffee,Urea
+110,54,10,watermelon,TSP
+110,54,10,watermelon,TSP
+110,54,10,watermelon,TSP
+86,36,41,rice,TSP
+86,36,41,rice,TSP
+86,36,41,rice,TSP
+5,38,15,pomegranate,TSP
+5,38,15,pomegranate,TSP
+5,38,15,pomegranate,TSP
+100,54,24,watermelon,TSP
+100,54,24,watermelon,TSP
+100,54,24,watermelon,TSP
+109,54,27,watermelon,TSP
+109,54,27,watermelon,TSP
+109,54,27,watermelon,TSP
+5,38,21,pomegranate,TSP
+5,38,21,pomegranate,TSP
+5,38,21,pomegranate,TSP
+73,36,48,rice,TSP
+73,36,48,rice,TSP
+73,36,48,rice,TSP
+0,38,27,pomegranate,Superphosphate
+0,38,27,pomegranate,Superphosphate
+0,38,27,pomegranate,Superphosphate
+31,38,25,pomegranate,Superphosphate
+31,38,25,pomegranate,Superphosphate
+31,38,25,pomegranate,Superphosphate
+21,38,21,pomegranate,Superphosphate
+21,38,21,pomegranate,Superphosphate
+21,38,21,pomegranate,Superphosphate
+15,38,11,pomegranate,Potassium sulfate.
+15,38,11,pomegranate,Potassium sulfate.
+15,38,11,pomegranate,Potassium sulfate.
+39,38,30,pomegranate,Potassium sulfate.
+39,38,30,pomegranate,Potassium sulfate.
+39,38,30,pomegranate,Potassium sulfate.
+22,38,26,Cotton,Potassium sulfate.
+22,38,26,Cotton,Potassium sulfate.
+22,38,26,Cotton,Potassium sulfate.
+117,25,43,Cotton,Potassium chloride
+117,25,43,Cotton,Potassium chloride
+117,25,43,Cotton,Potassium chloride
+92,54,8,watermelon,DAP
+92,54,8,watermelon,DAP
+92,54,8,watermelon,DAP
+114,54,27,watermelon,DAP
+114,54,27,watermelon,DAP
+114,54,27,watermelon,DAP
+75,36,47,rice,DAP
+75,36,47,rice,DAP
+75,36,47,rice,DAP
+13,36,0,Wheat,DAP
+13,36,0,Wheat,DAP
+13,36,0,Wheat,DAP
+11,37,0,Tobacco,DAP
+11,37,0,Tobacco,DAP
+11,37,0,Tobacco,DAP
+12,36,0,Sugarcane,DAP
+12,36,0,Sugarcane,DAP
+12,36,0,Sugarcane,DAP
+12,40,0,Sugarcane,DAP
+12,40,0,Sugarcane,DAP
+12,40,0,Sugarcane,DAP
+78,36,43,rice,DAP
+78,36,43,rice,DAP
+78,36,43,rice,DAP
+13,40,0,Pulses,DAP
+13,40,0,Pulses,DAP
+13,40,0,Pulses,DAP
+12,41,0,Paddy,DAP
+12,41,0,Paddy,DAP
+12,41,0,Paddy,DAP
+12,39,0,Oil seeds,DAP
+12,39,0,Oil seeds,DAP
+12,39,0,Oil seeds,DAP
+15,37,0,Millets,DAP
+15,37,0,Millets,DAP
+15,37,0,Millets,DAP
+15,41,0,Millets,DAP
+15,41,0,Millets,DAP
+15,41,0,Millets,DAP
+14,41,0,Ground Nuts,DAP
+14,41,0,Ground Nuts,DAP
+14,41,0,Ground Nuts,DAP
+15,37,0,Ground Nuts,DAP
+15,37,0,Ground Nuts,DAP
+15,37,0,Ground Nuts,DAP
+13,39,0,Ground Nuts,DAP
+13,39,0,Ground Nuts,DAP
+13,39,0,Ground Nuts,DAP
+126,25,46,Cotton,DAP
+126,25,46,Cotton,DAP
+126,25,46,Cotton,DAP
+102,25,37,Cotton,DAP
+102,25,37,Cotton,DAP
+102,25,37,Cotton,DAP
+15,40,0,Cotton,DAP
+15,40,0,Cotton,DAP
+15,40,0,Cotton,DAP
+14,38,0,Cotton,DAP
+14,38,0,Cotton,DAP
+14,38,0,Cotton,DAP
+14,35,0,Cotton,DAP
+14,35,0,Cotton,DAP
+14,35,0,Cotton,DAP
+11,38,0,Cotton,DAP
+11,38,0,Cotton,DAP
+11,38,0,Cotton,DAP
+116,25,23,coffee,DAP
+116,25,23,coffee,DAP
+116,25,23,coffee,DAP
+117,25,34,coffee,DAP
+117,25,34,coffee,DAP
+117,25,34,coffee,DAP
+10,35,0,Barley,DAP
+10,35,0,Barley,DAP
+10,35,0,Barley,DAP
+12,42,0,Barley,DAP
+12,42,0,Barley,DAP
+12,42,0,Barley,DAP
+23,19,0,Wheat,28-28
+23,19,0,Wheat,28-28
+23,19,0,Wheat,28-28
+23,19,0,Wheat,28-28
+23,19,0,Wheat,28-28
+23,19,0,Wheat,28-28
+22,20,0,Tobacco,28-28
+22,20,0,Tobacco,28-28
+22,20,0,Tobacco,28-28
+22,24,0,Tobacco,28-28
+22,24,0,Tobacco,28-28
+22,24,0,Tobacco,28-28
+23,21,0,Tobacco,28-28
+23,21,0,Tobacco,28-28
+23,21,0,Tobacco,28-28
+21,23,0,Pulses,28-28
+21,23,0,Pulses,28-28
+21,23,0,Pulses,28-28
+24,19,0,Pulses,28-28
+24,19,0,Pulses,28-28
+24,19,0,Pulses,28-28
+24,22,0,Paddy,28-28
+24,22,0,Paddy,28-28
+24,22,0,Paddy,28-28
+24,18,0,Paddy,28-28
+24,18,0,Paddy,28-28
+24,18,0,Paddy,28-28
+21,18,0,Millets,28-28
+21,18,0,Millets,28-28
+21,18,0,Millets,28-28
+23,24,0,Millets,28-28
+23,24,0,Millets,28-28
+23,24,0,Millets,28-28
+23,20,0,Maize,28-28
+23,20,0,Maize,28-28
+23,20,0,Maize,28-28
+22,21,0,Maize,28-28
+22,21,0,Maize,28-28
+22,21,0,Maize,28-28
+24,23,0,Ground Nuts,28-28
+24,23,0,Ground Nuts,28-28
+24,23,0,Ground Nuts,28-28
+24,20,0,Cotton,28-28
+24,20,0,Cotton,28-28
+24,20,0,Cotton,28-28
+21,19,0,Barley,28-28
+21,19,0,Barley,28-28
+21,19,0,Barley,28-28
+21,28,0,Barley,28-28
+21,28,0,Barley,28-28
+21,28,0,Barley,28-28
+13,9,0,Wheat,20-20
+13,9,0,Wheat,20-20
+13,9,0,Wheat,20-20
+9,13,0,Sugarcane,20-20
+9,13,0,Sugarcane,20-20
+9,13,0,Sugarcane,20-20
+10,15,0,Sugarcane,20-20
+10,15,0,Sugarcane,20-20
+10,15,0,Sugarcane,20-20
+11,9,0,Sugarcane,20-20
+11,9,0,Sugarcane,20-20
+11,9,0,Sugarcane,20-20
+12,10,0,Sugarcane,20-20
+12,10,0,Sugarcane,20-20
+12,10,0,Sugarcane,20-20
+14,13,0,Pulses,20-20
+14,13,0,Pulses,20-20
+14,13,0,Pulses,20-20
+13,13,0,Pulses,20-20
+13,13,0,Pulses,20-20
+13,13,0,Pulses,20-20
+13,10,0,Paddy,20-20
+13,10,0,Paddy,20-20
+13,10,0,Paddy,20-20
+12,8,0,Oil seeds,20-20
+12,8,0,Oil seeds,20-20
+12,8,0,Oil seeds,20-20
+13,14,0,Oil seeds,20-20
+13,14,0,Oil seeds,20-20
+13,14,0,Oil seeds,20-20
+10,9,0,Millets,20-20
+10,9,0,Millets,20-20
+10,9,0,Millets,20-20
+8,15,0,Millets,20-20
+8,15,0,Millets,20-20
+8,15,0,Millets,20-20
+10,14,0,Millets,20-20
+10,14,0,Millets,20-20
+10,14,0,Millets,20-20
+9,10,0,Cotton,20-20
+9,10,0,Cotton,20-20
+9,10,0,Cotton,20-20
+10,14,13,Sugarcane,17-17-17
+10,14,13,Sugarcane,17-17-17
+10,14,13,Sugarcane,17-17-17
+12,12,14,Sugarcane,17-17-17
+12,12,14,Sugarcane,17-17-17
+12,12,14,Sugarcane,17-17-17
+11,15,13,Sugarcane,17-17-17
+11,15,13,Sugarcane,17-17-17
+11,15,13,Sugarcane,17-17-17
+14,12,15,Maize,17-17-17
+14,12,15,Maize,17-17-17
+14,12,15,Maize,17-17-17
+15,11,14,Ground Nuts,17-17-17
+15,11,14,Ground Nuts,17-17-17
+15,11,14,Ground Nuts,17-17-17
+11,15,12,Cotton,17-17-17
+11,15,12,Cotton,17-17-17
+11,15,12,Cotton,17-17-17
+12,13,10,Barley,17-17-17
+12,13,10,Barley,17-17-17
+12,13,10,Barley,17-17-17
+20,6,25,kidneybeans,15-15-15
+20,6,25,kidneybeans,15-15-15
+20,6,25,kidneybeans,15-15-15
+23,6,23,kidneybeans,15-15-15
+23,6,23,kidneybeans,15-15-15
+23,6,23,kidneybeans,15-15-15
+25,6,18,kidneybeans,15-15-15
+25,6,18,kidneybeans,15-15-15
+25,6,18,kidneybeans,15-15-15
+23,6,23,kidneybeans,15-15-15
+23,6,23,kidneybeans,15-15-15
+23,6,23,kidneybeans,15-15-15
+8,28,8,Wheat,14-35-14
+8,28,8,Wheat,14-35-14
+8,28,8,Wheat,14-35-14
+10,32,7,Sugarcane,14-35-14
+10,32,7,Sugarcane,14-35-14
+10,32,7,Sugarcane,14-35-14
+8,33,8,Sugarcane,14-35-14
+8,33,8,Sugarcane,14-35-14
+8,33,8,Sugarcane,14-35-14
+8,31,7,Pulses,14-35-14
+8,31,7,Pulses,14-35-14
+8,31,7,Pulses,14-35-14
+9,22,10,Paddy,14-35-14
+9,22,10,Paddy,14-35-14
+9,22,10,Paddy,14-35-14
+10,29,8,Paddy,14-35-14
+10,29,8,Paddy,14-35-14
+10,29,8,Paddy,14-35-14
+9,30,7,Oil seeds,14-35-14
+9,30,7,Oil seeds,14-35-14
+9,30,7,Oil seeds,14-35-14
+8,30,9,Oil seeds,14-35-14
+8,30,9,Oil seeds,14-35-14
+8,30,9,Oil seeds,14-35-14
+5,29,9,Maize,14-35-14
+5,29,9,Maize,14-35-14
+5,29,9,Maize,14-35-14
+9,30,10,Maize,14-35-14
+9,30,10,Maize,14-35-14
+9,30,10,Maize,14-35-14
+7,30,9,Cotton,14-35-14
+7,30,9,Cotton,14-35-14
+7,30,9,Cotton,14-35-14
+9,29,9,Cotton,14-35-14
+9,29,9,Cotton,14-35-14
+9,29,9,Cotton,14-35-14
+8,31,10,Cotton,14-35-14
+8,31,10,Cotton,14-35-14
+8,31,10,Cotton,14-35-14
+7,30,9,Barley,14-35-14
+7,30,9,Barley,14-35-14
+7,30,9,Barley,14-35-14
+24,6,18,orange,14-14-14
+24,6,18,orange,14-14-14
+24,6,18,orange,14-14-14
+4,6,13,orange,14-14-14
+4,6,13,orange,14-14-14
+4,6,13,orange,14-14-14
+8,6,16,orange,14-14-14
+8,6,16,orange,14-14-14
+8,6,16,orange,14-14-14
+5,6,25,orange,14-14-14
+5,6,25,orange,14-14-14
+5,6,25,orange,14-14-14
+12,19,18,Wheat,10-26-26
+12,19,18,Wheat,10-26-26
+12,19,18,Wheat,10-26-26
+13,16,17,Tobacco,10-26-26
+13,16,17,Tobacco,10-26-26
+13,16,17,Tobacco,10-26-26
+4,17,17,Tobacco,10-26-26
+4,17,17,Tobacco,10-26-26
+4,17,17,Tobacco,10-26-26
+6,16,19,Pulses,10-26-26
+6,16,19,Pulses,10-26-26
+6,16,19,Pulses,10-26-26
+7,20,16,Pulses,10-26-26
+7,20,16,Pulses,10-26-26
+7,20,16,Pulses,10-26-26
+6,21,19,Paddy,10-26-26
+6,21,19,Paddy,10-26-26
+6,21,19,Paddy,10-26-26
+5,15,18,Barley,10-26-26
+5,15,18,Barley,10-26-26
+5,15,18,Barley,10-26-26
+22,5,17,orange,10-10-10
+22,5,17,orange,10-10-10
+22,5,17,orange,10-10-10
+4,5,23,orange,10-10-10
+4,5,23,orange,10-10-10
+4,5,23,orange,10-10-10
+11,5,14,orange,10-10-10
+11,5,14,orange,10-10-10
+11,5,14,orange,10-10-10
+19,6,21,kidneybeans,10-10-10
+19,6,21,kidneybeans,10-10-10
+19,6,21,kidneybeans,10-10-10
